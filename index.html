@@ -11,8 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  />
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>FEM grid</title>
   </head>
 
@@ -51,14 +56,13 @@
             <div class="work-tag">ARTICLE</div>
             <div class="article-details">
 
-              <h2>New perspectives as an independent creative</h2>
-              <div class="icon-external-link">🔗</div>
+              <h1>21 Pro JavaScript Tricks You Didn’t Know: A Guide from Beginners to Pros</h1>
             </div>
           </div>
-          <img src="Images/blog-1.jpeg" alt="nigera falls" class="image-1" />
+          <img src="Images/thalia-tran-d1Wj9qU5C-o-unsplash.jpg" alt="nigera falls" class="image-1" />
         </article>
       </a>
-      <article class="testimonial flow bg-neutral-100 text-secondary-400">
+      <article class="testimonial bg-neutral-100 text-secondary-400">
         <h1>Hello 👋</h1>
         <p class="text">
           Poulos Collective is a design consultancy that specializes in visual
@@ -118,26 +122,27 @@
           developer after receiving multiple offers. 100% recommend! ”
         </p>
       </article>
-      <article class="testimonial flow bg-secondary-400 text-neutral-100">
-        <div class="flex">
-          <div>
-            <img src="./images/image-jonathan.jpg" alt="Jonathan Walters" />
+      <article class="testimonial pad-none  text-neutral-100">
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <div class="carousel">
+            <img src="images/img-1.jpg" alt="img" draggable="false" />
+            <img src="images/img-2.jpg" alt="img" draggable="false" />
+            <img src="images/img-3.jpg" alt="img" draggable="false" />
+            <img src="images/img-4.jpg" alt="img" draggable="false" />
+            <img src="images/img-5.jpg" alt="img" draggable="false" />
+            <img src="images/img-6.jpg" alt="img" draggable="false" />
+            <img src="images/img-7.jpg" alt="img" draggable="false" />
+            <img src="images/img-8.jpg" alt="img" draggable="false" />
+            <img src="images/img-9.jpg" alt="img" draggable="false" />
           </div>
-          <div>
-            <h2 class="name">Jonathan Walters</h2>
-            <p class="position">Verified Graduate</p>
-          </div>
+          <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
-        <p>The team was very supportive and kept me motivated</p>
-        <p>
-          “ I started as a total newbie with virtually no coding skills. I now
-          work as a mobile engineer for a big company. This was one of the best
-          investments I’ve made in myself. ”
-        </p>
       </article>
       <article
         class="testimonial grid-col-span-2 pandora-card  text-neutral-100"
       >
+      <div class="card-overlay"></div>
        <div class="work-frame-wide">
         <div class="work-title-wrap alt">
           <div class="work-tag">
@@ -145,10 +150,10 @@
         </div>
       <div class="work-details">
          <h2>Global Design and Product Experience</h2>
-         <div>Design direction lead on the future e-commerce shopping experience for Pandora that includes product landing pages, product detail pages, cart, checkout and account. This work is ongoing.</div>
+         <div class="work-details-text">Design direction lead on the future e-commerce shopping experience for Pandora that includes product landing pages, product detail pages, cart, checkout and account. This work is ongoing.</div>
       </div>
         </div>
-        <img src="Images/7.png" alt="apple vision website" class="image-2 ">
+        <img src="Images/thalia-tran-d1Wj9qU5C-o-unsplash.jpg" alt="apple vision website" class="image-2 ">
        </div>
       </article>
       <article
@@ -156,7 +161,7 @@
       >
       <div class="profile-card">
         <div class="profile-image">
-          <img src="Images/1698752565025.jpeg" alt="" class="image-3" >
+          <img src="Images/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg" alt="" class="image-3" >
         </div>
         <div class="profile-content">
           <h2>Behind the Octopus</h2>
@@ -212,33 +217,23 @@
         </p>
       </article>
       <article
-        class="testimonial grid-col-span-2 flow bg-secondary-500 text-neutral-100"
-      >
-        <div class="flex">
-          <div>
-            <img
-              class="border-primary-400"
-              src="./images/image-patrick.jpg"
-              alt="Patrick Abrams"
-            />
-          </div>
-          <div>
-            <h2 class="name">Patrick Abrams</h2>
-            <p class="position">Verified Graduate</p>
-          </div>
-        </div>
-        <p>
-          Awesome teaching support from TAs who did the bootcamp themselves.
-          Getting guidance from them and learning from their experiences was
-          easy.
-        </p>
-        <p>
-          “ The staff seem genuinely concerned about my progress which I find
-          really refreshing. The program gave me the confidence necessary to be
-          able to go out in the world and present myself as a capable junior
-          developer. ”
-        </p>
-      </article>
+      class="testimonial grid-col-span-2 pandora-card  text-neutral-100"
+    >
+    <div class="card-overlay"></div>
+     <div class="work-frame-wide">
+      <div class="work-title-wrap alt">
+        <div class="work-tag">
+      <div>Pandora</div>
+      </div>
+    <div class="work-details">
+       <h2>Global Design and Product Experience</h2>
+       <div class="work-details-text">Design direction lead on the future e-commerce shopping experience for Pandora that includes product landing pages, product detail pages, cart, checkout and account. This work is ongoing.</div>
+    </div>
+      </div>
+      <img src="Images/ONE.png" alt="apple vision website" class="image-2 ">
+     </div>
+    </article>
+     
     </main>
   </body>
 </html>
