@@ -94,6 +94,134 @@ carousel.addEventListener("touchend", dragStop);
 
 //////////////////////////////////////////////////////////////////////////////////
 
+// document.querySelectorAll(".carousel2").forEach((carousel2) => {
+//   const items = carousel2.querySelectorAll(".carousel__item");
+//   const buttonsHtml = Array.from(items, () => {
+//     return `<span class="carousel__button"></span>`;
+//   });
+
+//   carousel2.insertAdjacentHTML(
+//     "beforeend",
+//     `
+// 		<div class="carousel__nav">
+// 			${buttonsHtml.join("")}
+// 		</div>
+// 	`
+//   );
+
+//   const buttons = carousel2.querySelectorAll(".carousel__button");
+
+//   buttons.forEach((button, i) => {
+//     button.addEventListener("click", () => {
+//       changeCarouselItem(i);
+//     });
+//   });
+
+//   let startX = 0;
+//   let isDragging = false;
+
+//   carousel2.addEventListener("mousedown", (e) => {
+//     startX = e.clientX;
+//     isDragging = true;
+//   });
+
+//   carousel2.addEventListener("mouseup", () => {
+//     isDragging = false;
+//   });
+
+//   carousel2.addEventListener("mousemove", (e) => {
+//     if (isDragging) {
+//       const diffX = e.clientX - startX;
+//       if (diffX > 50) {
+//         // Dragged right, show previous item
+//         const selectedItemIndex = Array.from(items).findIndex((item) =>
+//           item.classList.contains("carousel__item--selected")
+//         );
+//         if (selectedItemIndex > 0) {
+//           changeCarouselItem(selectedItemIndex - 1);
+//         }
+//         isDragging = false;
+//       } else if (diffX < -50) {
+//         // Dragged left, show next item
+//         const selectedItemIndex = Array.from(items).findIndex((item) =>
+//           item.classList.contains("carousel__item--selected")
+//         );
+//         if (selectedItemIndex < items.length - 1) {
+//           changeCarouselItem(selectedItemIndex + 1);
+//         }
+//         isDragging = false;
+//       }
+//     }
+//   });
+
+//   carousel2.addEventListener("touchstart", (e) => {
+//     startX = e.touches[0].clientX;
+//   });
+
+//   carousel2.addEventListener("touchmove", (e) => {
+//     const diffX = e.touches[0].clientX - startX;
+//     if (diffX > 50) {
+//       // Swiped right, show previous item
+//       const selectedItemIndex = Array.from(items).findIndex((item) =>
+//         item.classList.contains("carousel__item--selected")
+//       );
+//       if (selectedItemIndex > 0) {
+//         changeCarouselItem(selectedItemIndex - 1);
+//       }
+//     } else if (diffX < -50) {
+//       // Swiped left, show next item
+//       const selectedItemIndex = Array.from(items).findIndex((item) =>
+//         item.classList.contains("carousel__item--selected")
+//       );
+//       if (selectedItemIndex < items.length - 1) {
+//         changeCarouselItem(selectedItemIndex + 1);
+//       }
+//     }
+//   });
+
+//   function changeCarouselItem(index) {
+//     // un-select all the items
+//     items.forEach((item) => item.classList.remove("carousel__item--selected"));
+//     buttons.forEach((button) =>
+//       button.classList.remove("carousel__button--selected")
+//     );
+
+//     items[index].classList.add("carousel__item--selected");
+//     buttons[index].classList.add("carousel__button--selected");
+//   }
+//   carousel2.addEventListener("mousedown", (e) => {
+//     startX = e.clientX;
+//     isDragging = true;
+//     // Rokna yehi hai ki browser default drag action na kare
+//     e.preventDefault();
+//   });
+
+//   carousel2.addEventListener("touchstart", (e) => {
+//     startX = e.touches[0].clientX;
+//     // Rokna yehi hai ki browser default drag action na kare
+//     e.preventDefault();
+//   });
+
+// /* if you wanted to move the div using right left arrow key in keyboard then uncomment this*/
+
+//   // document.addEventListener("keydown", (e) => {
+//   //   const selectedItemIndex = Array.from(items).findIndex((item) =>
+//   //     item.classList.contains("carousel__item--selected")
+//   //   );
+
+//   //   if (e.key === "ArrowLeft" && selectedItemIndex > 0) {
+//   //     // Agar left arrow press kiya gaya hai aur current item index 0 se bada hai, toh previous item select karo
+//   //     changeCarouselItem(selectedItemIndex - 1);
+//   //   } else if (e.key === "ArrowRight" && selectedItemIndex < items.length - 1) {
+//   //     // Agar right arrow press kiya gaya hai aur current item index last item se kam hai, toh next item select karo
+//   //     changeCarouselItem(selectedItemIndex + 1);
+//   //   }
+//   // });
+//   // Select the first item on page load
+//   items[0].classList.add("carousel__item--selected");
+//   buttons[0].classList.add("carousel__button--selected");
+// });
+
 document.querySelectorAll(".carousel2").forEach((carousel2) => {
   const items = carousel2.querySelectorAll(".carousel__item");
   const buttonsHtml = Array.from(items, () => {
@@ -123,16 +251,20 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
   carousel2.addEventListener("mousedown", (e) => {
     startX = e.clientX;
     isDragging = true;
+    // Rokna yehi hai ki browser default drag action na kare
+    e.preventDefault();
   });
 
-  carousel2.addEventListener("mouseup", () => {
-    isDragging = false;
+  carousel2.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    // Rokna yehi hai ki browser default drag action na kare
+    e.preventDefault();
   });
 
   carousel2.addEventListener("mousemove", (e) => {
     if (isDragging) {
       const diffX = e.clientX - startX;
-      if (diffX > 50) {
+      if (diffX > 100) {
         // Dragged right, show previous item
         const selectedItemIndex = Array.from(items).findIndex((item) =>
           item.classList.contains("carousel__item--selected")
@@ -141,7 +273,7 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
           changeCarouselItem(selectedItemIndex - 1);
         }
         isDragging = false;
-      } else if (diffX < -50) {
+      } else if (diffX < -100) {
         // Dragged left, show next item
         const selectedItemIndex = Array.from(items).findIndex((item) =>
           item.classList.contains("carousel__item--selected")
@@ -152,10 +284,6 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
         isDragging = false;
       }
     }
-  });
-
-  carousel2.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
   });
 
   carousel2.addEventListener("touchmove", (e) => {
@@ -190,22 +318,28 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
     buttons[index].classList.add("carousel__button--selected");
   }
 
-/* if you wanted to move the div using right left arrow key in keyboard then uncomment this*/ 
+  let isMouseDown = false;
 
-  // document.addEventListener("keydown", (e) => {
-  //   const selectedItemIndex = Array.from(items).findIndex((item) =>
-  //     item.classList.contains("carousel__item--selected")
-  //   );
+  carousel2.addEventListener("mousedown", (e) => {
+    isMouseDown = true;
+    startX = e.clientX;
+    carousel2.style.transition = "none"; // Disable transition while dragging
+  });
 
-  //   if (e.key === "ArrowLeft" && selectedItemIndex > 0) {
-  //     // Agar left arrow press kiya gaya hai aur current item index 0 se bada hai, toh previous item select karo
-  //     changeCarouselItem(selectedItemIndex - 1);
-  //   } else if (e.key === "ArrowRight" && selectedItemIndex < items.length - 1) {
-  //     // Agar right arrow press kiya gaya hai aur current item index last item se kam hai, toh next item select karo
-  //     changeCarouselItem(selectedItemIndex + 1);
-  //   }
-  // });
+  carousel2.addEventListener("mouseup", () => {
+    isMouseDown = false;
+    carousel2.style.transition = "transform 0.3s ease"; // Enable transition after dragging
+  });
+
+  carousel2.addEventListener("mousemove", (e) => {
+    if (isMouseDown) {
+      const diffX = e.clientX - startX;
+      const newScrollLeft = prevScrollLeft - diffX;
+      carousel2.scrollLeft = newScrollLeft;
+    }
+  });
   // Select the first item on page load
   items[0].classList.add("carousel__item--selected");
   buttons[0].classList.add("carousel__button--selected");
 });
+

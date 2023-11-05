@@ -461,6 +461,9 @@ p {
 .carousel2 {
   position: relative;
   height: 100%;
+  user-select: none;
+
+  transition: transform 3s ease;
 }
 
 .carousel__item {
@@ -473,6 +476,8 @@ p {
   font-size: 2em;
   color: #ffffff;
   display: none;
+  transition: transform 3s ease;
+  user-select: none;
 }
 
 .carousel__item--selected {
