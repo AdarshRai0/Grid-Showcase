@@ -189,6 +189,9 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
     items[index].classList.add("carousel__item--selected");
     buttons[index].classList.add("carousel__button--selected");
   }
+
+/* if you wanted to move the div using right left arrow key in keyboard then uncomment this*/ 
+
   // document.addEventListener("keydown", (e) => {
   //   const selectedItemIndex = Array.from(items).findIndex((item) =>
   //     item.classList.contains("carousel__item--selected")
