@@ -84,13 +84,13 @@ const dragStop = () => {
 };
 
 carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
+carousel.addEventListener("touchstart", dragStart, { passive: true });
 
 document.addEventListener("mousemove", dragging);
-carousel.addEventListener("touchmove", dragging);
+carousel.addEventListener("touchmove", dragging, { passive: true });
 
 document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("touchend", dragStop);
+carousel.addEventListener("touchend", dragStop, { passive: true });
 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -255,11 +255,15 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
     e.preventDefault();
   });
 
-  carousel2.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-    // Rokna yehi hai ki browser default drag action na kare
-    e.preventDefault();
-  });
+  carousel2.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      // Rokna yehi hai ki browser default drag action na kare
+      e.preventDefault();
+    },
+    { passive: true }
+  );
 
   carousel2.addEventListener("mousemove", (e) => {
     if (isDragging) {
@@ -286,26 +290,30 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
     }
   });
 
-  carousel2.addEventListener("touchmove", (e) => {
-    const diffX = e.touches[0].clientX - startX;
-    if (diffX > 50) {
-      // Swiped right, show previous item
-      const selectedItemIndex = Array.from(items).findIndex((item) =>
-        item.classList.contains("carousel__item--selected")
-      );
-      if (selectedItemIndex > 0) {
-        changeCarouselItem(selectedItemIndex - 1);
+  carousel2.addEventListener(
+    "touchmove",
+    (e) => {
+      const diffX = e.touches[0].clientX - startX;
+      if (diffX > 50) {
+        // Swiped right, show previous item
+        const selectedItemIndex = Array.from(items).findIndex((item) =>
+          item.classList.contains("carousel__item--selected")
+        );
+        if (selectedItemIndex > 0) {
+          changeCarouselItem(selectedItemIndex - 1);
+        }
+      } else if (diffX < -50) {
+        // Swiped left, show next item
+        const selectedItemIndex = Array.from(items).findIndex((item) =>
+          item.classList.contains("carousel__item--selected")
+        );
+        if (selectedItemIndex < items.length - 1) {
+          changeCarouselItem(selectedItemIndex + 1);
+        }
       }
-    } else if (diffX < -50) {
-      // Swiped left, show next item
-      const selectedItemIndex = Array.from(items).findIndex((item) =>
-        item.classList.contains("carousel__item--selected")
-      );
-      if (selectedItemIndex < items.length - 1) {
-        changeCarouselItem(selectedItemIndex + 1);
-      }
-    }
-  });
+    },
+    { passive: true }
+  );
 
   function changeCarouselItem(index) {
     // un-select all the items
@@ -342,4 +350,3 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
   items[0].classList.add("carousel__item--selected");
   buttons[0].classList.add("carousel__button--selected");
 });
-
