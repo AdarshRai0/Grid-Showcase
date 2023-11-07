@@ -265,6 +265,11 @@ h1 {
   position: relative;
   overflow: hidden;
 }
+.video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
 
 .article-content-wrapper {
   z-index: 1;
@@ -283,6 +288,7 @@ h1 {
   display: flex;
   position: relative;
   overflow: hidden;
+  border-radius: 1rem;
 }
 .card-overlay {
   z-index: 1;
@@ -607,8 +613,8 @@ a {
   flex-direction: column;
   background-color: #121517;
 }
-.footer-h3{
-  color:#fff;
+.footer-h3 {
+  color: #fff;
 }
 .div-block-2 {
   grid-column-gap: 32px;
