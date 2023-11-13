@@ -191,7 +191,7 @@ h3 {
   grid-area: span 2 / span 3 / span 2 / span 3;
 }
 .testimonial:nth-child(11) {
-  grid-area: span 2 / span 4 / span 2 / span 4;
+  grid-area: span 2 / span 4 / span 3 / span 4;
 }
 .testimonial:nth-child(12) {
   grid-area: span 1 / span 2 / span 1 / span 2;
@@ -297,7 +297,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
 }
 .work-tag {
   z-index: 1;
@@ -337,6 +337,7 @@ img {
   overflow: hidden;
   padding: 0;
 }
+
 .work-frame-wide {
   height: 100%;
   flex-direction: column;
@@ -345,6 +346,7 @@ img {
   padding: 48px;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 .work-title-wrap {
   z-index: 100;
@@ -426,7 +428,13 @@ h2 {
 }
 .image-3 {
   width: 100%;
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: 0%;
   object-fit: cover;
+  height: inherit;
 }
 p {
   margin-top: 0;
@@ -498,12 +506,9 @@ p {
   user-select: none;
   transition: transform 3s ease;
 }
-
 .carousel__item {
   border-radius: 10px;
   height: 100%;
-  background: grey;
-  padding: 1em;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   font-size: 2em;
@@ -527,17 +532,18 @@ p {
 }
 
 .carousel__button {
-  width: 20px;
-  height: 5px;
+  width: 60px;
+  height: 6px;
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(172, 172, 172);
   border-radius: 10px;
   margin: 0 5px;
   cursor: pointer;
+  z-index: 99;
 }
 
 .carousel__button--selected {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgb(255, 255, 255);
 }
 
 .contact-card {
@@ -626,4 +632,20 @@ a {
   align-items: center;
   margin-top: 16px;
   display: grid;
+}
+.work-frame-1 {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.image-42 {
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: 0%;
+  bottom: 0%;
 }
