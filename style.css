@@ -269,6 +269,7 @@ h1 {
   width: 100%;
   height: auto;
   position: absolute;
+  border-radius: 10px;
 }
 .video-img {
   width: 100%;
@@ -276,6 +277,7 @@ h1 {
   top: 0%;
   object-fit: cover;
   position: absolute;
+  border-radius: 10px;
 }
 
 .article-content-wrapper {
