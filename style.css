@@ -203,10 +203,10 @@ h3 {
   grid-area: span 2 / span 2 / span 2 / span 2;
 }
 .testimonial:nth-child(15) {
-  grid-area: span 2 / span 2 / span 2 / span 2;
+  grid-area: span 3 / span 2 / span 2 / span 2;
 }
 .testimonial:nth-child(16) {
-  grid-area: span 2 / span 2 / span 2 / span 2;
+  grid-area: span 3 / span 2 / span 2 / span 2;
 }
 .testimonial:nth-child(17) {
   grid-area: span 1 / span 2 / span 1 / span 2;
@@ -215,10 +215,10 @@ h3 {
   grid-area: span 2 / span 4 / span 2 / span 4;
 }
 .testimonial:nth-child(19) {
-  grid-area: span 2 / span 2 / span 2 / span 2;
+  grid-area: span 3 / span 2 / span 3 / span 2;
 }
 .testimonial:nth-child(20) {
-  grid-area: span 2 / span 2 / span 2 / span 2;
+  grid-area: span 3 / span 2 / span 3 / span 2;
 }
 .testimonial:nth-child(21) {
   grid-area: span 1 / span 4 / span 1 / span 4;
@@ -268,6 +268,13 @@ h1 {
 .video {
   width: 100%;
   height: auto;
+  position: absolute;
+}
+.video-img {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  object-fit: cover;
   position: absolute;
 }
 
@@ -643,9 +650,13 @@ a {
   overflow: hidden;
 }
 .image-42 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
-  top: auto;
-  left: auto;
-  right: 0%;
+  top: 0%;
   bottom: 0%;
+  left: 0%;
+  right: 0%;
+  border-radius: 10px;
 }
