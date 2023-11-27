@@ -15,6 +15,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
   />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
  
@@ -166,11 +170,20 @@
         </div>
       </div>
       </article>
-      <article class="testimonial bg-secondary-400 text-secondary-400">
-        <div class="carousel2">
-          <div class="carousel__item">Content #1</div>
-          <div class="carousel__item">Content #2</div>
-          <div class="carousel__item">Content #3</div>
+
+          <!-- ///////////////////////////////////////////////////////////////// -->
+
+      <article class="testimonial pad-none  text-secondary-400">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="Images/img-1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/img-2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/img-3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/img-4.jpg" alt=""></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </article>
       
@@ -225,19 +238,25 @@
       <article
       class="testimonial pad-none text-neutral-100 bg-secondary-400 w-slide"
     >
-    <div class="carousel2">
-      <div class="carousel__item">
-        <div class="wishlist-icon"><i class="fa-solid fa-envelope"></i></div>
-        <h2>E-Commerce</h2>
-        <div>PDP, PLP, Cart, Checkout, Deals, Promotions, Repeat Delivery</div>
-      </div>
-      <div class="carousel__item"> <div class="wishlist-icon"><i class="fa-solid fa-envelope"></i></div>
-      <h2>K-Commerce</h2>
-      <div>PDP, PLP, Cart, Checkout, Deals, Promotions, Repeat Delivery</div></div>
-      <div class="carousel__item"> <div class="wishlist-icon"><i class="fa-solid fa-envelope"></i></div>
-      <h2>A-Commerce</h2>
-      <div>PDP, PLP, Cart, Checkout, Deals, Promotions, Repeat Delivery</div></div>
-    </div>
+      <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="wishlist-icon"><i class="fa-solid fa-envelope"></i></div>
+            <h2>A-Commerce</h2>
+            <div>PDP, PLP, Cart, Checkout, Deals, Promotions, Repeat Delivery</div>
+          </div>
+            <div class="swiper-slide"> <div class="wishlist-icon"><i class="fa-solid fa-envelope"></i></div>
+            <h2>E-Commerce</h2>
+            <div>PDP, PLP, Cart, Checkout, Deals, Promotions, Repeat Delivery</div></div>
+            <div class="swiper-slide"> <div class="wishlist-icon"><i class="fa-solid fa-envelope"></i></div>
+            <h2>K-Commerce</h2>
+            <div>PDP, PLP, Cart, Checkout, Deals, Promotions, Repeat Delivery</div></div>
+           
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination swiper-pagination-custom"></div>
+        </div>
     </article>
     
     <!-- ///////////////////////////////////////////////////////////////// -->
@@ -542,7 +561,7 @@
 
      
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

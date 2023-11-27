@@ -350,3 +350,17 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
   items[0].classList.add("carousel__item--selected");
   buttons[0].classList.add("carousel__button--selected");
 });
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
