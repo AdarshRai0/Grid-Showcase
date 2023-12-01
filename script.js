@@ -354,7 +354,7 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
-  loop: true,
+  loop: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
