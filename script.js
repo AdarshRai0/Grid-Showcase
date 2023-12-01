@@ -353,7 +353,7 @@ document.querySelectorAll(".carousel2").forEach((carousel2) => {
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 30,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -364,3 +364,4 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
