@@ -161,7 +161,7 @@ h3 {
   background-color: #121417;
 }
 .bg-secondary-c-7 {
-  background-color: #40C2A6;
+  background-color: #40c2a6;
 }
 
 .bg-neutral-100 {
@@ -435,6 +435,37 @@ h2 {
 .work-details-text {
   font-size: 1rem;
   line-height: normal;
+}
+.button-external-site {
+  z-index: 1000;
+  height: 32px;
+  color: #121517;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100ch;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  display: flex;
+}
+.w-button {
+  color: #121517;
+  line-height: inherit;
+  cursor: pointer;
+  margin-top: 2vh;
+  border: 0;
+  border-radius: 50px;
+  padding: 9px 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+.w-button:hover {
+  background-color: #fff;
+  color: #121517;
 }
 .image-2 {
   width: 100%;
