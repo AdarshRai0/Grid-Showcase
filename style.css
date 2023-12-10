@@ -394,7 +394,7 @@ img {
 }
 .work-title-wrap {
   z-index: 100;
-  width: 62%;
+  width: 100%;
   flex-direction: column;
   align-self: flex-start;
   align-items: flex-start;
@@ -511,6 +511,54 @@ h2 {
   object-fit: cover;
   height: inherit;
 }
+.image-6 {
+  width: 90%;
+  object-fit: cover;
+  top: -10%;
+  position: absolute;
+  bottom: auto;
+  left: auto;
+  right: 0%;
+  height: inherit;
+}
+.image-7 {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  object-fit: contain;
+  bottom: 0;
+}
+.image-42 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  border-radius: 10px;
+}
+.image-2 {
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+  position: absolute;
+  top: auto;
+  bottom: 0%;
+  left: auto;
+  right: 0%;
+}
+.image-4 {
+  width: 600px;
+  max-width: none;
+  object-fit: cover;
+  position: absolute;
+  top: auto;
+  bottom: 10%;
+  left: auto;
+  right: auto;
+}
 .image-5 {
   width: 70%;
   position: absolute;
@@ -520,6 +568,9 @@ h2 {
   right: auto;
   object-fit: cover;
   height: inherit;
+}
+.image-apple {
+  display: none;
 }
 p {
   margin-top: 0;
@@ -728,37 +779,7 @@ a {
   position: relative;
   overflow: hidden;
 }
-.image-42 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
-  border-radius: 10px;
-}
-.image-2 {
-  width: 100%;
-  max-width: none;
-  object-fit: cover;
-  position: absolute;
-  top: auto;
-  bottom: 0%;
-  left: auto;
-  right: 0%;
-}
-.image-4 {
-  width: 600px;
-  max-width: none;
-  object-fit: cover;
-  position: absolute;
-  top: auto;
-  bottom: 10%;
-  left: auto;
-  right: auto;
-}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -880,7 +901,7 @@ a {
     grid-area: span 1 / span 4 / span 1 / span 4;
   }
   .testimonial:nth-child(9) {
-    grid-area: span 2 / span 4 / span 1 / span 4;
+    grid-area: span 1 / span 4 / span 1 / span 4;
   }
   .testimonial:nth-child(10) {
     grid-area: span 1 / span 4 / span 1 / span 4;
@@ -898,10 +919,10 @@ a {
     grid-area: span 2 / span 4 / span 1 / span 4;
   }
   .testimonial:nth-child(15) {
-    grid-area: span 3 / span 4 / span 1 / span 4;
+    grid-area: span 2 / span 4 / span 1 / span 4;
   }
   .testimonial:nth-child(16) {
-    grid-area: span 3 / span 4 / span 1 / span 4;
+    grid-area: span 2 / span 4 / span 1 / span 4;
   }
   .testimonial:nth-child(17) {
     grid-area: span 1 / span 4 / span 1 / span 4;
@@ -910,7 +931,7 @@ a {
     grid-area: span 2 / span 4 / span 1 / span 4;
   }
   .testimonial:nth-child(19) {
-    grid-area: span 3 / span 4 / span 1 / span 4;
+    grid-area: span 2 / span 4 / span 1 / span 4;
   }
   .testimonial:nth-child(20) {
     grid-area: span 2 / span 4 / span 1 / span 4;
@@ -983,5 +1004,77 @@ a {
     top: var(--swiper-pagination-top, auto);
     left: -15px;
     width: 100%;
+  }
+  .image-6 {
+    width: 96%;
+    object-fit: cover;
+    top: 2%;
+    position: absolute;
+    bottom: auto;
+    left: auto;
+    right: 0%;
+    height: inherit;
+  }
+  .image-7 {
+    position: absolute;
+    width: 87%;
+    height: inherit;
+    object-fit: contain;
+    bottom: -13%;
+  }
+  .image-4 {
+    width: 300px;
+    max-width: none;
+    object-fit: cover;
+    position: absolute;
+    top: auto;
+    bottom: 7%;
+    left: auto;
+    right: auto;
+  }
+  .image-5 {
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    bottom: auto;
+    left: auto;
+    right: 2%;
+    object-fit: contain;
+    height: inherit;
+  }
+  .image-3 {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: auto;
+    right: 0%;
+    object-fit: cover;
+    height: inherit;
+  }
+  .image-42 {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    border-radius: 10px;
+  }
+  .video {
+    display: none;
+  }
+  .image-apple {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+    top: 7%;
+    position: absolute;
+    bottom: auto;
+    left: auto;
+    right: 0%;
+    height: inherit;
   }
 }
